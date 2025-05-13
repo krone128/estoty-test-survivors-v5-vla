@@ -3,6 +3,7 @@ using Code.Gameplay.Cameras.Services;
 using Code.Gameplay.Characters.Enemies.Services;
 using Code.Gameplay.Characters.Heroes.Behaviours;
 using Code.Gameplay.Characters.Heroes.Services;
+using Code.Infrastructure;
 using UnityEngine;
 using Zenject;
 using Random = UnityEngine.Random;
@@ -17,8 +18,10 @@ namespace Code.Gameplay.Characters.Enemies.Behaviours
 
 		private float _timer;
 
-		private const float SpawnInterval = 3f;
+		private const float SpawnInterval = 2f;
 		private const float SpawnDistanceGap = 0.5f;
+		
+		[Inject] private IDifficultyService _difficulty;
 
 		[Inject]
 		private void Construct(ICameraProvider cameraProvider, IHeroProvider heroProvider, IEnemyFactory enemyFactory)
@@ -26,8 +29,6 @@ namespace Code.Gameplay.Characters.Enemies.Behaviours
 			_enemyFactory = enemyFactory;
 			_heroProvider = heroProvider;
 			_cameraProvider = cameraProvider;
-
-			_timer = SpawnInterval * 0.9f;
 		}
 
 		private void Update()

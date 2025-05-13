@@ -16,6 +16,12 @@ namespace Code.Infrastructure.Installers
 			BindCameraServices();
 			BindCombatServices();
 			BindPickupServices();
+			BindGameServices();
+		}
+
+		private void BindGameServices()
+		{
+			Container.BindInterfacesAndSelfTo<DifficultyService>().AsSingle();
 		}
 
 		private void BindPickupServices()
