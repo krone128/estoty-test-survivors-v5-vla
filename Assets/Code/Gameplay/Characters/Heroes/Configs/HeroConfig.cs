@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Code.Gameplay.Characters.Heroes.Configs
@@ -14,5 +15,6 @@ namespace Code.Gameplay.Characters.Heroes.Configs
 		public float Damage = 10f;
 		public float VisionRange = 10f;
 		public float ShootCooldown = 1f;
+		public float LevelUpExperienceStep = 100f;
 	}
 }

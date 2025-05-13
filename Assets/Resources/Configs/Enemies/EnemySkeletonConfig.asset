@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee07dcd0a8d4274a19eb0e85523be8a, type: 3}
   m_Name: EnemySkeletonConfig
   m_EditorClassIdentifier: 
-  Id: 1
-  Prefab: {fileID: 2198279886409412981, guid: c4fb28ad43a1f4bc991a52accf7459ba, type: 3}
-  Health: 30
-  MovementSpeed: 1.5
+  Id: 2
+  Prefab: {fileID: 3688300243968611906, guid: 672447d010481463f88cc052e62610e7, type: 3}
+  Health: 10
+  MovementSpeed: 2.5
   Damage: 10

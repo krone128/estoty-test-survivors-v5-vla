@@ -10,7 +10,9 @@ namespace Code.UI
 	public class HudWindow : WindowBase
 	{
 		[SerializeField] private Slider _healthBar;
+		[SerializeField] private Slider _experienceBar;
 		[SerializeField] private Text _killedEnemiesText;
+		[SerializeField] private Text _playerLevelText;
 		
 		private IHeroProvider _heroProvider;
 		private IEnemyDeathTracker _enemyDeathTracker;
@@ -27,6 +29,7 @@ namespace Code.UI
 		protected override void OnUpdate()
 		{
 			UpdateHealthBar();
+			UpdateExperienceBar();
 			UpdateKilledEnemiesText();
 		}
 
@@ -41,6 +44,16 @@ namespace Code.UI
 				_healthBar.value = _heroProvider.Health.CurrentHealth / _heroProvider.Health.MaxHealth;
 			else
 				_healthBar.value = 0;
+		}
+		
+		private void UpdateExperienceBar()
+		{
+			if (_heroProvider.Hero != null)
+				_experienceBar.value = _heroProvider.Experience.CurrentExperience / _heroProvider.Experience.LevelUpExperience;
+			else
+				_experienceBar.value = 0;
+
+			_playerLevelText.text = $"Level {_heroProvider.Experience.PlayerLevel}";
 		}
 	}
 }

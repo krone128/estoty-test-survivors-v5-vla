@@ -348,6 +348,7 @@ GameObject:
   - component: {fileID: 8916894696654245301}
   - component: {fileID: 8603472430194168057}
   - component: {fileID: 4497796606428550256}
+  - component: {fileID: 4786071752971615538}
   m_Layer: 7
   m_Name: Hero
   m_TagString: Untagged
@@ -562,6 +563,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _delay: 0
+--- !u!114 &4786071752971615538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7899254480151393711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd643d53d98741a2a289c2a18294237a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <PlayerLevel>k__BackingField: 1
+  <CurrentExperience>k__BackingField: 0
+  <LevelUpExperience>k__BackingField: 0
 --- !u!1 &8698949126122365015
 GameObject:
   m_ObjectHideFlags: 0
