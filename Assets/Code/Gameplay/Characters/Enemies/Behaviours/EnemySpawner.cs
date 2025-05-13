@@ -47,7 +47,7 @@ namespace Code.Gameplay.Characters.Enemies.Behaviours
 			if (_timer >= SpawnInterval)
 			{
 				Vector2 randomSpawnPosition = RandomSpawnPosition(hero.transform.position);
-				_enemyFactory.CreateEnemy(EnemyId.Walker, at: randomSpawnPosition, Quaternion.identity);
+				_enemyFactory.CreateEnemy(EnumExtensions.GetRandom(EnemyId.Unknown), at: randomSpawnPosition, Quaternion.identity);
 				_timer = 0;
 			}
 		}
