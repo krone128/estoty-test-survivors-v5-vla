@@ -4,6 +4,6 @@ namespace Code.Gameplay.Lifetime.Behaviours
 {
 	public interface IDamageApplier
 	{
-		event Action<Health> OnDamageApplied;
+		event Action<Health, int> OnDamageApplied;
 	}
 }

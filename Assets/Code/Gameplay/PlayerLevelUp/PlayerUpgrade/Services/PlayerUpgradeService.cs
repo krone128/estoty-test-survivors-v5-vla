@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Code.Gameplay.Characters.Heroes.Services;
-using Code.Infrastructure.Config;
 using Code.Infrastructure.ConfigsManagement;
 using Code.Infrastructure.UIManagement;
 using Code.UI;
@@ -19,10 +18,10 @@ namespace Code.Infrastructure
         [Inject] private IPlayerUpgradeFactory _playerUpgradeFactory;
         [Inject] private IHeroProvider _heroProvider;
         [Inject] private IUiService _uiService;
-        [Inject] private ConfigsService _configsService;
+        [Inject] private IConfigsService _configsService;
 
         
-        private IList<IPlayerUpgrade> _upgrades = new List<IPlayerUpgrade>();
+        private readonly IList<IPlayerUpgrade> _upgrades = new List<IPlayerUpgrade>();
         
         [Inject]
         private void Construct()

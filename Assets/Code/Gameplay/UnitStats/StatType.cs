@@ -11,6 +11,8 @@ namespace Code.Gameplay.UnitStats
 		ProjectileSpeed = 6,
 		ShootCooldown = 7,
 		LevelUpExperience = 8,
-		HealingModifier = 9,
+		HealingMultiplier = 9,
+		ProjectileBounce = 10,
+		ProjectilePiercing = 11,
 	}
 }

@@ -7,7 +7,8 @@ namespace Code.Gameplay.PlayerLevelUp.PlayerUpgrade.Impl
 {
     public class HealthUpPlayerUpgrade : StatsPlayerUpgrade
     {
-        public HealthUpPlayerUpgrade(StatType statType, int upgradeStep, int maxLevel, string description, Sprite icon) : base(statType, upgradeStep, maxLevel, description, icon)
+        public HealthUpPlayerUpgrade(StatType statType, int upgradeStep, int maxLevel,
+            string description, Sprite icon) : base(statType, upgradeStep, maxLevel, description, icon)
         {
         }
 

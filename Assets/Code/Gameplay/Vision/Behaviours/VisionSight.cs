@@ -1,4 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
+using Code.Gameplay.Characters.Enemies.Behaviours;
+using Code.Gameplay.Identification.Behaviours;
 using Code.Gameplay.Teams.Behaviours;
 using Code.Gameplay.UnitStats;
 using Code.Gameplay.UnitStats.Behaviours;
@@ -30,7 +33,7 @@ namespace Code.Gameplay.Vision.Behaviours
 			GatherEnemiesInSight();
 		}
     
-		public GameObject GetClosestEnemy()
+		public GameObject GetClosestEnemy(params int[] ignoreIds)
 		{
 			GameObject closest = null;
 			float minDistance = float.MaxValue;
@@ -40,6 +43,11 @@ namespace Code.Gameplay.Vision.Behaviours
 				if (enemy == null)
 					continue;
 
+				if (enemy.TryGetComponent<Id>(out var enemyComp) && ignoreIds.Contains(enemyComp.Value))
+				{
+					continue;
+				}
+				
 				float distance = Vector3.Distance(transform.position, enemy.transform.position);
 
 				if (distance < minDistance)

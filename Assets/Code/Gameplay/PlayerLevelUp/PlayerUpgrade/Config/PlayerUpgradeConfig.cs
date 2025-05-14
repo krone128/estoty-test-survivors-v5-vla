@@ -1,3 +1,4 @@
+using Code.Gameplay.UnitStats;
 using UnityEngine;
 
 namespace Code.Infrastructure.Config

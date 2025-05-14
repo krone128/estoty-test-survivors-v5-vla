@@ -51,6 +51,8 @@ namespace Code.Gameplay.Lifetime.Behaviours
 
 		public void Heal(float healAmount)
 		{
+			healAmount *= _stats.GetStat(StatType.HealingMultiplier);
+			
 			float change = Mathf.Clamp(healAmount, 0, MaxHealth - CurrentHealth);
 			CurrentHealth += change;
 			

@@ -28,7 +28,8 @@ namespace Code.Gameplay.Projectiles.Services
 			_assetsService = assetsService;
 		}
 		
-		public Projectile CreateProjectile(Vector3 at, Vector2 direction, TeamType teamType, float damage, float movementSpeed)
+		public Projectile CreateProjectile(Vector3 at, Vector2 direction, TeamType teamType,
+			float damage, float movementSpeed, float bounceStat, float piercingStat)
 		{
 			Debug.Log($"Creating projectile with damage {damage}");
 			
@@ -37,10 +38,13 @@ namespace Code.Gameplay.Projectiles.Services
 			
 			projectile.GetComponent<Id>()
 				.Setup(_identifiers.Next());
-			
+
 			projectile.GetComponent<Stats>()
 				.SetBaseStat(StatType.MovementSpeed, movementSpeed)
-				.SetBaseStat(StatType.Damage, damage);
+				.SetBaseStat(StatType.Damage, damage)
+				.SetBaseStat(StatType.ProjectileBounce, bounceStat)
+				.SetBaseStat(StatType.ProjectilePiercing, piercingStat)
+				.SetBaseStat(StatType.VisionRange, 10);
 
 			projectile.GetComponent<Team>()
 				.Type = teamType;

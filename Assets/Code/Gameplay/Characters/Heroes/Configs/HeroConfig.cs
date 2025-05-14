@@ -15,6 +15,9 @@ namespace Code.Gameplay.Characters.Heroes.Configs
 		public float Damage = 10f;
 		public float VisionRange = 10f;
 		public float ShootCooldown = 1f;
-		public float LevelUpExperience = 2f;
+		public float LevelUpExperience = 10f;
+		public float HealMultiplier = 1f;
+		public float ProjectileBounce = 0;
+		public float ProjectilePiercing = 0;
 	}
 }

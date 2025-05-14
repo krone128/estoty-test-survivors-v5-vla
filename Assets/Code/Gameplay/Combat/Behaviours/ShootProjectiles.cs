@@ -55,7 +55,9 @@ namespace Code.Gameplay.Combat.Behaviours
 				_aimDirectionProvider.GetAimDirection(), 
 				_ownerTeam.Type, 
 				_ownerStats.GetStat(StatType.Damage), 
-				_ownerStats.GetStat(StatType.ProjectileSpeed));
+				_ownerStats.GetStat(StatType.ProjectileSpeed),
+				_ownerStats.GetStat(StatType.ProjectileBounce),
+				_ownerStats.GetStat(StatType.ProjectilePiercing));
 		}
 	}
 }

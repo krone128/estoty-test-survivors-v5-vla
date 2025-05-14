@@ -1,3 +1,4 @@
+using Code.Gameplay.PlayerLevelUp.PlayerUpgrade.Impl;
 using Code.Infrastructure.Config;
 
 namespace Code.Infrastructure
@@ -9,8 +10,9 @@ namespace Code.Infrastructure
             return config switch
             {
                 PlayerStatUpgradeConfig playerUpgradeConfig =>
-                    new StatsPlayerUpgrade(playerUpgradeConfig.StatType,
-                    playerUpgradeConfig.UpgradeStep, playerUpgradeConfig.MaxLevel, playerUpgradeConfig.DescriptionFormat, playerUpgradeConfig.Icon),
+                    new StatsPlayerUpgrade(playerUpgradeConfig.StatType, 
+                    playerUpgradeConfig.UpgradeStep, playerUpgradeConfig.MaxLevel,
+                    playerUpgradeConfig.DescriptionFormat, playerUpgradeConfig.Icon),
                 
                 _ => (IPlayerUpgrade)null
             };

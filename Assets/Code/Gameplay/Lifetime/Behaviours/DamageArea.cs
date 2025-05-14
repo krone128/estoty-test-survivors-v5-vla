@@ -17,7 +17,7 @@ namespace Code.Gameplay.Lifetime.Behaviours
 		
 		private readonly List<int> _damagedTargetIds = new();
 		
-		public event Action<Health> OnDamageApplied;
+		public event Action<Health, int> OnDamageApplied;
 
 		private void Awake()
 		{
@@ -30,8 +30,11 @@ namespace Code.Gameplay.Lifetime.Behaviours
 			if (other.TryGetComponent(out Health health) == false)  
 				return;
 			
+			if (other.TryGetComponent(out Id id) == false)  
+				return;
+			
 			if (CanDamage(health))
-				Damage(health);
+				Damage(health, id.Value);
 		}
 
 		private bool CanDamage(Health health)
@@ -53,7 +56,7 @@ namespace Code.Gameplay.Lifetime.Behaviours
 			return result;
 		}
 		
-		private void Damage(Health health)
+		private void Damage(Health health, int targetId)
 		{
 			float damage = _stats.GetStat(StatType.Damage);
 			health.ApplyDamage(damage);
@@ -66,7 +69,7 @@ namespace Code.Gameplay.Lifetime.Behaviours
 				}
 			}
 			
-			OnDamageApplied?.Invoke(health);
+			OnDamageApplied?.Invoke(health, targetId);
 		}
 	}
 }

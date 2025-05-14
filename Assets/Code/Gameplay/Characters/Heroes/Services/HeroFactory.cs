@@ -45,7 +45,10 @@ namespace Code.Gameplay.Characters.Heroes.Services
 				.SetBaseStat(StatType.VisionRange, heroConfig.VisionRange)
 				.SetBaseStat(StatType.ShootCooldown, heroConfig.ShootCooldown)
 				.SetBaseStat(StatType.Damage, heroConfig.Damage)
-				.SetBaseStat(StatType.LevelUpExperience, heroConfig.LevelUpExperience);
+				.SetBaseStat(StatType.LevelUpExperience, heroConfig.LevelUpExperience)
+				.SetBaseStat(StatType.HealingMultiplier, heroConfig.HealMultiplier)
+				.SetBaseStat(StatType.ProjectileBounce, heroConfig.ProjectileBounce)
+				.SetBaseStat(StatType.ProjectilePiercing, heroConfig.ProjectilePiercing);
 
 			hero.GetComponent<Health>()
 				.Setup(heroConfig.Health, heroConfig.Health);
