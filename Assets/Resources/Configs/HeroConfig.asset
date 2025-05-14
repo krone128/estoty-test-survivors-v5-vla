@@ -15,6 +15,9 @@ MonoBehaviour:
   Prefab: {fileID: 2640274528941266507, guid: 3f83fa4e688b44e7e94493c444c7dcf2, type: 3}
   Health: 100
   MovementSpeed: 5
-  GunRotationSpeed: 5
-  Damage: 10
+  ProjectileSpeed: 10
+  GunRotationSpeed: 10
+  Damage: 50
   VisionRange: 10
+  ShootCooldown: 1
+  LevelUpExperience: 1

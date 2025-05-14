@@ -33,9 +33,7 @@ namespace Code.Gameplay.Lifetime.Behaviours
 		public void AddExperience(float amount)
 		{
 			CurrentExperience += amount;
-			
 			OnExperienceChanged?.Invoke(amount);
-
 			while (CurrentExperience >= LevelUpExperience) LevelUpPlayer();
 		}
 		
@@ -43,9 +41,6 @@ namespace Code.Gameplay.Lifetime.Behaviours
 		{
 			CurrentExperience -= LevelUpExperience;
 			++PlayerLevel;
-			var levelUpIncrement= _stats.GetStat(StatType.LevelUpExperienceStep);
-			_stats.AddStatModifier(new StatModifier(StatType.LevelUpExperience, levelUpIncrement));
-			
 			OnLevelUp?.Invoke(PlayerLevel);
 		}
 

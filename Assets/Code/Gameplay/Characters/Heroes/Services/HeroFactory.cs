@@ -37,7 +37,7 @@ namespace Code.Gameplay.Characters.Heroes.Services
 			
 			hero.GetComponent<Id>()
 				.Setup(_identifiers.Next());
-			
+
 			hero.GetComponent<Stats>()
 				.SetBaseStat(StatType.MaxHealth, heroConfig.Health)
 				.SetBaseStat(StatType.MovementSpeed, heroConfig.MovementSpeed)
@@ -45,8 +45,7 @@ namespace Code.Gameplay.Characters.Heroes.Services
 				.SetBaseStat(StatType.VisionRange, heroConfig.VisionRange)
 				.SetBaseStat(StatType.ShootCooldown, heroConfig.ShootCooldown)
 				.SetBaseStat(StatType.Damage, heroConfig.Damage)
-				.SetBaseStat(StatType.LevelUpExperience, heroConfig.LevelUpExperienceStep)
-				.SetBaseStat(StatType.LevelUpExperienceStep, heroConfig.LevelUpExperienceStep);
+				.SetBaseStat(StatType.LevelUpExperience, heroConfig.LevelUpExperience);
 
 			hero.GetComponent<Health>()
 				.Setup(heroConfig.Health, heroConfig.Health);

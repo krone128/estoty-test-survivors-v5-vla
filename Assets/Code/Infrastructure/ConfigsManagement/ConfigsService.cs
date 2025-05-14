@@ -6,6 +6,7 @@ using Code.Gameplay.Characters.Heroes.Configs;
 using Code.Gameplay.PickUps;
 using Code.Gameplay.PickUps.Configs;
 using Code.Infrastructure.AssetManagement;
+using Code.Infrastructure.Config;
 
 namespace Code.Infrastructure.ConfigsManagement
 {
@@ -15,8 +16,10 @@ namespace Code.Infrastructure.ConfigsManagement
 
 		private Dictionary<EnemyId, EnemyConfig> _enemiesById = new();
 		private Dictionary<PickUpId, PickUpConfig> _pickupsById = new();
+		private Dictionary<PlayerUpgradeType, PlayerUpgradeConfig> _playerUpgradesById = new();
 
 		public HeroConfig HeroConfig { get; private set; }
+		public PlayerUpgradeServiceConfig PlayerUpgradeServiceConfig { get; private set; }
 
 		public ConfigsService(IAssetsService assets)
 		{
@@ -28,6 +31,7 @@ namespace Code.Infrastructure.ConfigsManagement
 			LoadHeroConfig();
 			LoadEnemyConfigs();
 			LoadPickUpConfigs();
+			LoadPlayerUpgradeServiceConfig();
 		}
 
 		private void LoadPickUpConfigs()
@@ -40,11 +44,22 @@ namespace Code.Infrastructure.ConfigsManagement
 		{
 			HeroConfig = _assets.LoadAssetFromResources<HeroConfig>("Configs/HeroConfig");
 		}
+		
+		private void LoadPlayerUpgradeServiceConfig()
+		{
+			PlayerUpgradeServiceConfig = _assets.LoadAssetFromResources<PlayerUpgradeServiceConfig>("Configs/PlayerUpgrade/PlayerUpgradeServiceConfig");
+		}
 
 		private void LoadEnemyConfigs()
 		{
 			var enemyConfigs = _assets.LoadAssetsFromResources<EnemyConfig>("Configs/Enemies");
 			_enemiesById = enemyConfigs.ToList().ToDictionary(x => x.Id, x => x);
+		}
+		
+		private void LoadPLayerUpgradeConfigs()
+		{
+			var enemyConfigs = _assets.LoadAssetsFromResources<PlayerUpgradeConfig>("Configs/PlayerUpgrade");
+			_playerUpgradesById = enemyConfigs.ToList().ToDictionary(x => x.PlayerUpgradeType, x => x);
 		}
 
 		public EnemyConfig GetEnemyConfig(EnemyId id)
@@ -61,6 +76,14 @@ namespace Code.Infrastructure.ConfigsManagement
 				return pickUpConfig;
 
 			throw new KeyNotFoundException($"PickUp config with id {id} not found");
+		}
+		
+		public PlayerUpgradeConfig GetPlayerUpgradeConfig(PlayerUpgradeType id)
+		{
+			if (_playerUpgradesById.TryGetValue(id, out PlayerUpgradeConfig config))
+				return config;
+
+			throw new KeyNotFoundException($"PlayerUpgrade config with id {id} not found");
 		}
 	}
 }

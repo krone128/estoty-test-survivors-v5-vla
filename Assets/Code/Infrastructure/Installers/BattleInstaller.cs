@@ -22,6 +22,9 @@ namespace Code.Infrastructure.Installers
 		private void BindGameServices()
 		{
 			Container.BindInterfacesAndSelfTo<DifficultyService>().AsSingle();
+			
+			Container.BindInterfacesAndSelfTo<PlayerUpgradeFactory>().AsSingle();
+			Container.BindInterfacesAndSelfTo<PlayerUpgradeService>().AsSingle();
 		}
 
 		private void BindPickupServices()
