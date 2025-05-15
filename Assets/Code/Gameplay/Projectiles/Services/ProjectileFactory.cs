@@ -31,8 +31,6 @@ namespace Code.Gameplay.Projectiles.Services
 		public Projectile CreateProjectile(Vector3 at, Vector2 direction, TeamType teamType,
 			float damage, float movementSpeed, float bounceStat, float piercingStat)
 		{
-			Debug.Log($"Creating projectile with damage {damage}");
-			
 			var prefab = _assetsService.LoadAssetFromResources<Projectile>("Projectiles/Projectile");
 			Projectile projectile = _instantiateService.InstantiatePrefabForComponent(prefab, at, Quaternion.FromToRotation(Vector3.up, direction));
 			
@@ -48,9 +46,32 @@ namespace Code.Gameplay.Projectiles.Services
 
 			projectile.GetComponent<Team>()
 				.Type = teamType;
-			
-			projectile.GetComponent<IMovementDirectionProvider>()
+			projectile.GetComponent<SettableMovementDirection>()
 				.SetDirection(direction);
+			
+			return projectile;
+		}
+		
+		public Projectile SpawnOrbitalProjectile(Transform parentTransform, TeamType teamType,
+			float damage)
+		{
+			var prefab = _assetsService.LoadAssetFromResources<Projectile>("Projectiles/OrbitalProjectile");
+			var projectile = _instantiateService.InstantiatePrefabForComponent(prefab, parentTransform.position,
+				Quaternion.identity, parentTransform);
+			projectile.gameObject.name = "Orbital";
+			
+			projectile.GetComponent<Id>()
+				.Setup(_identifiers.Next());
+
+			projectile.GetComponent<Stats>()
+				.SetBaseStat(StatType.MovementSpeed, 0)
+				.SetBaseStat(StatType.Damage, damage)
+				.SetBaseStat(StatType.ProjectileBounce, 0)
+				.SetBaseStat(StatType.ProjectilePiercing, 0)
+				.SetBaseStat(StatType.VisionRange, 0);
+
+			projectile.GetComponent<Team>()
+				.Type = teamType;
 			
 			return projectile;
 		}

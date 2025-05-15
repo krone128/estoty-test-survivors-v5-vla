@@ -1,11 +1,14 @@
+using System;
 using Code.Gameplay.Combat.Dispatchers;
 using UnityEngine;
 
 namespace Code.Gameplay.Lifetime.Behaviours
 {
 	[RequireComponent(typeof(IDamageApplier))]
-	public class ProjectileHitHandler : MonoBehaviour
+	public class ProjectileHitHandler : MonoBehaviour, IDestroyNotify
 	{
+		public event Action OnDestroy;
+		
 		[SerializeField] private float _delay;
 		[SerializeField] private ProjectileHitDispatcherBase[] _projectileDispatchers;
 		
@@ -35,6 +38,8 @@ namespace Code.Gameplay.Lifetime.Behaviours
 					return;
 				}
 			}
+			
+			OnDestroy?.Invoke();
 			
 			Destroy(gameObject, _delay);
 		}

@@ -17,4 +17,4 @@ MonoBehaviour:
   MaxLevel: 0
   DescriptionFormat: '{0} +{1}'
   StatType: 3
-  UpgradeStep: 2
+  UpgradeStep: 5

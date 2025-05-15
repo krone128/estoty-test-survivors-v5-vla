@@ -15,6 +15,6 @@ MonoBehaviour:
   Icon: {fileID: -205726582, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
   PlayerUpgradeType: 5
   MaxLevel: 0
-  DescriptionFormat: '{0} +{1}'
+  DescriptionFormat: '{0} +{1} degrees'
   StatType: 5
-  UpgradeStep: 1
+  UpgradeStep: 3

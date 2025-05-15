@@ -8,5 +8,7 @@ namespace Code.Gameplay.Projectiles.Services
 	{
 		Projectile CreateProjectile(Vector3 at, Vector2 direction, TeamType teamType, float damage, float movementSpeed,
 			float bounceStat, float piercingStat);
+
+		Projectile SpawnOrbitalProjectile(Transform parentTransform, TeamType teamType, float damage);
 	}
 }

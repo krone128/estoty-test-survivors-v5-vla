@@ -21,6 +21,11 @@ namespace Code.Gameplay.Combat.Dispatchers
             return true;
         }
 
+        protected void Complete()
+        {
+            CurrentHit = MaxHits;
+        }
+
         public void ResetCounter()
         {
             CurrentHit = 0;

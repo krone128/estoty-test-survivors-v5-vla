@@ -6,7 +6,7 @@ namespace Code.Infrastructure
         
         PiercingProjectiles = 2,
         BouncingProjectiles = 3,
-        OrbitingProjectiles = 4,
+        Orbital = 4,
         
         RotateSpeedUp = 5,
         DamageUp = 6,

@@ -349,6 +349,7 @@ GameObject:
   - component: {fileID: 8603472430194168057}
   - component: {fileID: 4497796606428550256}
   - component: {fileID: 4786071752971615538}
+  - component: {fileID: -5821289050526719543}
   m_Layer: 7
   m_Name: Hero
   m_TagString: Untagged
@@ -578,6 +579,20 @@ MonoBehaviour:
   <PlayerLevel>k__BackingField: 1
   <CurrentExperience>k__BackingField: 0
   <LevelUpExperience>k__BackingField: 0
+--- !u!114 &-5821289050526719543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7899254480151393711}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 679cec498e784ff3af7cf10f5fd7707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _team: {fileID: 3349484104395423038}
+  _playerStats: {fileID: 2138147819601370093}
 --- !u!1 &8698949126122365015
 GameObject:
   m_ObjectHideFlags: 0

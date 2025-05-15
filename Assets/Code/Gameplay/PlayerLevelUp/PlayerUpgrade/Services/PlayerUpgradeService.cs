@@ -46,6 +46,8 @@ namespace Code.Infrastructure
 
         private void StartLevelUp()
         {
+            if(_upgrades.All(item => item.FullyUpgraded)) return;
+            
             Time.timeScale = 0;
             
             var levelUpWindow = _uiService.OpenWindow<LevelUpWindow>();

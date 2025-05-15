@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: e2f20be4a9f1c184485bcdc7bc65e23f, type: 3}
   PlayerUpgradeType: 2
-  MaxLevel: 1
+  MaxLevel: 0
   DescriptionFormat: '{0} +{1} hit'
-  StatType: 10
+  StatType: 11
   UpgradeStep: 1

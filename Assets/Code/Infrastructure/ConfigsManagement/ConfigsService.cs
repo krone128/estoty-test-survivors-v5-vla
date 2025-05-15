@@ -20,6 +20,7 @@ namespace Code.Infrastructure.ConfigsManagement
 
 		public HeroConfig HeroConfig { get; private set; }
 		public PlayerUpgradeServiceConfig PlayerUpgradeServiceConfig { get; private set; }
+		public DifficultyConfig DifficultyConfig { get; private set; }
 
 		public ConfigsService(IAssetsService assets)
 		{
@@ -28,10 +29,12 @@ namespace Code.Infrastructure.ConfigsManagement
 		
 		public void Load()
 		{
+			LoadDifficultyConfig();
 			LoadHeroConfig();
 			LoadEnemyConfigs();
 			LoadPickUpConfigs();
 			LoadPlayerUpgradeServiceConfig();
+			LoadPLayerUpgradeConfigs();
 		}
 
 		private void LoadPickUpConfigs()
@@ -45,9 +48,15 @@ namespace Code.Infrastructure.ConfigsManagement
 			HeroConfig = _assets.LoadAssetFromResources<HeroConfig>("Configs/HeroConfig");
 		}
 		
+		private void LoadDifficultyConfig()
+		{
+			DifficultyConfig = _assets.LoadAssetFromResources<DifficultyConfig>("Configs/Difficulty/DifficultyConfig");
+		}
+
+		
 		private void LoadPlayerUpgradeServiceConfig()
 		{
-			PlayerUpgradeServiceConfig = _assets.LoadAssetFromResources<PlayerUpgradeServiceConfig>("Configs/PlayerUpgrade/PlayerUpgradeServiceConfig");
+			PlayerUpgradeServiceConfig = _assets.LoadAssetFromResources<PlayerUpgradeServiceConfig>("Configs/PlayerUpgradeService/PlayerUpgradeServiceConfig");
 		}
 
 		private void LoadEnemyConfigs()

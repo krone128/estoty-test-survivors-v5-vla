@@ -17,11 +17,13 @@ namespace Code.Gameplay.Combat.Dispatchers
         protected override void DispatchEffect(int targetId)
         {
             var newTarget = _visionSight.GetClosestEnemy(targetId);
-            if (newTarget != null)
+            if (!newTarget)
             {
-                var direction = (newTarget.transform.position - transform.position).normalized;
-                _projectileMovement.SetDirection(direction);
+                Complete();
+                return;
             }
+            var direction = (newTarget.transform.position - transform.position).normalized;
+            _projectileMovement.SetDirection(direction);
         }
     }
 }
