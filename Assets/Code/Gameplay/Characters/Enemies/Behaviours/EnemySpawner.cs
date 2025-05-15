@@ -4,7 +4,6 @@ using Code.Gameplay.Cameras.Services;
 using Code.Gameplay.Characters.Enemies.Services;
 using Code.Gameplay.Characters.Heroes.Behaviours;
 using Code.Gameplay.Characters.Heroes.Services;
-using Code.Infrastructure;
 using Code.Infrastructure.ConfigsManagement;
 using UnityEngine;
 using Zenject;

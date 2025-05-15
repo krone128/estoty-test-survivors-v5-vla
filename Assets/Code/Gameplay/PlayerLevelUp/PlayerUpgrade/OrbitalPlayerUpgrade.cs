@@ -1,6 +1,5 @@
 using Code.Gameplay.Characters.Heroes.Services;
 using Code.Infrastructure.Behaviour;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Code.Infrastructure.PlayerLevelUp.PlayerUpgrade

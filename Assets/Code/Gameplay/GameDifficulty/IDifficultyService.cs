@@ -1,5 +1,3 @@
-using Zenject;
-
 namespace Code.Infrastructure
 {
     public interface IDifficultyService

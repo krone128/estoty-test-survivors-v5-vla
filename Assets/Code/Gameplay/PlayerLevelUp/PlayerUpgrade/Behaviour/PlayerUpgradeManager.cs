@@ -1,12 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Code.Gameplay.Characters.Heroes.Services;
 using Code.Infrastructure.ConfigsManagement;
 using Code.Infrastructure.UIManagement;
 using Code.UI;
-using JetBrains.Annotations;
-using Unity.VisualScripting;
 using UnityEngine;
 using Zenject;
 

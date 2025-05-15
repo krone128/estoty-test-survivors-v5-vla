@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Code.Gameplay.Characters.Heroes.Configs

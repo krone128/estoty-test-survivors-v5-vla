@@ -1,8 +1,6 @@
 using System;
-using System.Threading.Tasks;
 using Code.Gameplay.UnitStats;
 using Code.Gameplay.UnitStats.Behaviours;
-using Code.Infrastructure;
 using UnityEngine;
 
 namespace Code.Gameplay.Lifetime.Behaviours
