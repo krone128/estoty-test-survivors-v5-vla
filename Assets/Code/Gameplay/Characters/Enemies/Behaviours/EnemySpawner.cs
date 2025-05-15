@@ -20,8 +20,6 @@ namespace Code.Gameplay.Characters.Enemies.Behaviours
 
 		private const float SpawnInterval = 2f;
 		private const float SpawnDistanceGap = 0.5f;
-		
-		[Inject] private IDifficultyService _difficulty;
 
 		[Inject]
 		private void Construct(ICameraProvider cameraProvider, IHeroProvider heroProvider, IEnemyFactory enemyFactory)
