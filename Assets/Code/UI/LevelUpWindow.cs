@@ -13,7 +13,7 @@ namespace Code.UI
         public override bool IsUserCanClose { get; }
         public PlayerUpgradeLitsItem[] _selectionItems;
 
-        public void SetupItems(IEnumerable<IPlayerUpgradeViewModel> getPlayerUpgradeSelection)
+        public void SetupItems(IEnumerable<IPlayerUpgradePresenter> getPlayerUpgradeSelection)
         {
             foreach (var item in _selectionItems)
             {

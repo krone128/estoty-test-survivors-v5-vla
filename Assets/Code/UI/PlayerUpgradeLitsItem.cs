@@ -10,7 +10,7 @@ namespace Code.UI
         [SerializeField] private Image _image;
         [SerializeField] private Button _button;
 
-        private IPlayerUpgradeViewModel _model;
+        private IPlayerUpgradePresenter _model;
 
         private void Awake()
         {
@@ -22,7 +22,7 @@ namespace Code.UI
             _model?.Select();
         }
 
-        public void Initialize(IPlayerUpgradeViewModel model)
+        public void Initialize(IPlayerUpgradePresenter model)
         {
             _model = model;
             
