@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3298971f393243a2ad268c44c804c0fb, type: 3}
   m_Name: DifficultyConfig
   m_EditorClassIdentifier: 
-  GameDifficultyUpdateInterval: 30
-  EnemyDifficultyHealthStep: 5
-  EnemyDifficultyDamageStep: 5
+  GameDifficultyUpdateInterval: 45
+  EnemyHealthStep: 5
+  EnemyDamageStep: 5
