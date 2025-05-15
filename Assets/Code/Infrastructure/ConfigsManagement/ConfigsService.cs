@@ -21,6 +21,7 @@ namespace Code.Infrastructure.ConfigsManagement
 		public HeroConfig HeroConfig { get; private set; }
 		public PlayerUpgradeServiceConfig PlayerUpgradeServiceConfig { get; private set; }
 		public DifficultyConfig DifficultyConfig { get; private set; }
+		public EnemySpawnerConfig EnemySpawnerConfig { get; set; }
 
 		public ConfigsService(IAssetsService assets)
 		{
@@ -29,6 +30,7 @@ namespace Code.Infrastructure.ConfigsManagement
 		
 		public void Load()
 		{
+			LoadEnemySpawnerConfig();
 			LoadDifficultyConfig();
 			LoadHeroConfig();
 			LoadEnemyConfigs();
@@ -46,6 +48,11 @@ namespace Code.Infrastructure.ConfigsManagement
 		private void LoadHeroConfig()
 		{
 			HeroConfig = _assets.LoadAssetFromResources<HeroConfig>("Configs/HeroConfig");
+		}
+		
+		private void LoadEnemySpawnerConfig()
+		{
+			EnemySpawnerConfig = _assets.LoadAssetFromResources<EnemySpawnerConfig>("Configs/Enemies/SpawnerConfig");
 		}
 		
 		private void LoadDifficultyConfig()

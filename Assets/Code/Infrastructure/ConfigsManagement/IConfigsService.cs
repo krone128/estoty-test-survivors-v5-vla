@@ -12,6 +12,7 @@ namespace Code.Infrastructure.ConfigsManagement
 		HeroConfig HeroConfig { get; }
 		PlayerUpgradeServiceConfig PlayerUpgradeServiceConfig { get; }
 		DifficultyConfig DifficultyConfig { get; }
+		EnemySpawnerConfig EnemySpawnerConfig { get; }
 		void Load();
 		EnemyConfig GetEnemyConfig(EnemyId id);
 		PickUpConfig GetPickUpConfig(PickUpId id);
