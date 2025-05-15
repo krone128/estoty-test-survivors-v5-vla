@@ -18,5 +18,7 @@ namespace Code.Infrastructure.Instantiation
 
 		T InstantiatePrefabForComponent<T>(T prefab, Vector3 at, Quaternion rotation, Transform parent = null) 
 			where T : Component;
+		
+		T InstantiateComponent<T>(GameObject target) where T : Component;
 	}
 }

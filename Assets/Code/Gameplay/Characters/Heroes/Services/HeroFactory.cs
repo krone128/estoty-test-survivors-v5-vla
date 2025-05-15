@@ -4,6 +4,7 @@ using Code.Gameplay.Identification.Behaviours;
 using Code.Gameplay.Lifetime.Behaviours;
 using Code.Gameplay.UnitStats;
 using Code.Gameplay.UnitStats.Behaviours;
+using Code.Infrastructure;
 using Code.Infrastructure.ConfigsManagement;
 using Code.Infrastructure.Identification;
 using Code.Infrastructure.Instantiation;
@@ -58,6 +59,7 @@ namespace Code.Gameplay.Characters.Heroes.Services
 				.SetBaseStat(StatType.RotationSpeed, heroConfig.GunRotationSpeed);
 			
 			_heroProvider.SetHero(hero);
+			_instantiateService.InstantiateComponent<PlayerUpgradeManager>(hero.gameObject);
 			
 			return hero;
 		}

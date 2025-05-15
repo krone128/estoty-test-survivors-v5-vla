@@ -72,5 +72,10 @@ namespace Code.Infrastructure.Instantiation
             
             return instantiated;
         }
+        
+        public T InstantiateComponent<T>(GameObject target) where T : Component
+        {
+            return _instantiator.InstantiateComponent<T>(target);
+        }
     }
 }

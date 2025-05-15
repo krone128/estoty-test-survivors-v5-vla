@@ -12,22 +12,25 @@ using Zenject;
 
 namespace Code.Infrastructure
 {
-    [UsedImplicitly]
-    public class PlayerUpgradeService : IPlayerUpgradeService
+    public class PlayerUpgradeManager : MonoBehaviour
     {
         private int _upgradeSelectionRange;
         
-        [Inject] private IPlayerUpgradeFactory _playerUpgradeFactory;
-        [Inject] private IHeroProvider _heroProvider;
-        [Inject] private IUiService _uiService;
-        [Inject] private IConfigsService _configsService;
-
+        private IPlayerUpgradeFactory _playerUpgradeFactory;
+        private IHeroProvider _heroProvider;
+        private IUiService _uiService;
+        private IConfigsService _configsService;
         
         private readonly IList<IPlayerUpgrade> _upgrades = new List<IPlayerUpgrade>();
-        
+
         [Inject]
-        private void Construct()
+        private void Construct(IPlayerUpgradeFactory playerUpgradeFactory, IHeroProvider heroProvider, IUiService uiService, IConfigsService configsService)
         {
+            _playerUpgradeFactory = playerUpgradeFactory;
+            _heroProvider = heroProvider;
+            _uiService = uiService;
+            _configsService = configsService;
+
             var config = _configsService.PlayerUpgradeServiceConfig;
             _upgradeSelectionRange = config.UpgradeSelectionRange;
 

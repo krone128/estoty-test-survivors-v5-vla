@@ -19,7 +19,6 @@ namespace Code.Infrastructure.Installers
 		private IInstantiateService _instantiateService;
 		private IUIRootProvider _uiRootProvider;
 		private IUiService _uiService;
-		private IPlayerUpgradeService _playerUpgradeService;
 
 		[Inject]
 		private void Construct(
@@ -28,8 +27,7 @@ namespace Code.Infrastructure.Installers
 			IInstantiateService instantiateService,
 			IInstantiator instantiator,
 			IUIRootProvider uiRootProvider,
-			IUiService uiService,
-			IPlayerUpgradeService playerUpgradeService
+			IUiService uiService
 		)
 		{
 			_uiService = uiService;
@@ -38,7 +36,6 @@ namespace Code.Infrastructure.Installers
 			_instantiator = instantiator;
 			_heroFactory = heroFactory;
 			_cameraProvider = cameraProvider;
-			_playerUpgradeService = playerUpgradeService;
 		}
     
 		public void Initialize()
