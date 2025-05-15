@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace Code.Infrastructure
 {
-    public class StatsPlayerUpgrade : PlayerUpgrade
+    public class PlayerStatUpgrade : PlayerUpgrade
     {
-        private StatModifier _statModifier;
+        protected StatModifier _statModifier;
 
-        public StatsPlayerUpgrade(StatType statType, int upgradeStep, int maxLevel, string description, Sprite icon) 
+        public PlayerStatUpgrade(StatType statType, int upgradeStep, int maxLevel, string description, Sprite icon) 
             : base(maxLevel, description, icon)
         {
             _statModifier = new StatModifier(statType, upgradeStep);

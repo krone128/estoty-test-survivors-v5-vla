@@ -1,11 +1,20 @@
+using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Code.Infrastructure.Config
 {
-    [CreateAssetMenu(fileName = "PlayerUpgradeServiceConfig", menuName = Constants.GameName + "/Configs/PlayerUpgradeService")]
+    [CreateAssetMenu(fileName = "PlayerUpgradeServiceConfig", menuName = Constants.GameName + "/Configs/PlayerUpgradeService/PlayerUpgradeServiceConfig")]
     public class PlayerUpgradeServiceConfig : ScriptableObject
     {
-        public PlayerUpgradeType[] EnabledUpgrades;
+        public UpgradeConfigItem[] Upgrades;
         public int UpgradeSelectionRange = 3;
+    }
+
+    [Serializable]
+    public class UpgradeConfigItem
+    {
+        public bool Enabled;
+        public PlayerUpgradeType Upgrade;
     }
 }

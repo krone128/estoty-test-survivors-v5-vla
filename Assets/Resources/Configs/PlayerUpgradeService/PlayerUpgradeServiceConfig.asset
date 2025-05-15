@@ -12,5 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d050ba86794263994827af0d272113, type: 3}
   m_Name: PlayerUpgradeServiceConfig
   m_EditorClassIdentifier: 
-  EnabledUpgrades: 01000000020000000300000004000000050000000600000007000000
+  Upgrades:
+  - Enabled: 0
+    Upgrade: 1
+  - Enabled: 0
+    Upgrade: 2
+  - Enabled: 0
+    Upgrade: 3
+  - Enabled: 0
+    Upgrade: 4
+  - Enabled: 1
+    Upgrade: 5
+  - Enabled: 0
+    Upgrade: 6
+  - Enabled: 0
+    Upgrade: 7
   UpgradeSelectionRange: 3

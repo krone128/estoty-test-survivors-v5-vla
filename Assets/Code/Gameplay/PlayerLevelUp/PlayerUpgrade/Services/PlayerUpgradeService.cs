@@ -29,9 +29,11 @@ namespace Code.Infrastructure
             var config = _configsService.PlayerUpgradeServiceConfig;
             _upgradeSelectionRange = config.UpgradeSelectionRange;
 
-            foreach (var upgradeType in config.EnabledUpgrades)
+            foreach (var upgradeType in config.Upgrades)
             {
-                var upgradeConfig = _configsService.GetPlayerUpgradeConfig(upgradeType);
+                if (!upgradeType.Enabled) continue;
+                
+                var upgradeConfig = _configsService.GetPlayerUpgradeConfig(upgradeType.Upgrade);
                 var upgrade = _playerUpgradeFactory.CreateUpgrade(upgradeConfig);
                 upgrade.ViewModel.OnSelected += Apply;
                 _upgrades.Add(upgrade);
@@ -59,6 +61,8 @@ namespace Code.Infrastructure
         {
             var hashSet = new HashSet<IPlayerUpgrade>();
 
+            var selectionRange = Mathf.Min(_upgradeSelectionRange, _upgrades.Count(upgrade => upgrade.FullyUpgraded));
+            
             do
             {
                 var rand = Random.Range(0, _upgrades.Count);
@@ -69,7 +73,7 @@ namespace Code.Infrastructure
                 
                 hashSet.Add(upgrade);
             } 
-            while (hashSet.Count < _upgradeSelectionRange);
+            while (hashSet.Count < selectionRange);
             
             return hashSet.Select(item => item.ViewModel);
         }

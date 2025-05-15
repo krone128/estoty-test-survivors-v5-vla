@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a6bc720d4274c30a635823c8257af3c, type: 3}
-  m_Name: PlayerStatRotateSpeedUpgradeConfig
+  m_Script: {fileID: 11500000, guid: cccc17bb94d74373aa490b28a311174f, type: 3}
+  m_Name: GunStatRotationSpeedUpgradeConfig
   m_EditorClassIdentifier: 
-  Icon: {fileID: -205726582, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
+  Icon: {fileID: -353751291, guid: 0d5e657ee5a074e4baa53d5b248a01d2, type: 3}
   PlayerUpgradeType: 5
   MaxLevel: 0
   DescriptionFormat: '{0} +{1} degrees'
   StatType: 5
-  UpgradeStep: 3
+  UpgradeStep: 2

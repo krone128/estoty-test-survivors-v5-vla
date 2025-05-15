@@ -67,8 +67,8 @@ namespace Code.Infrastructure.ConfigsManagement
 		
 		private void LoadPLayerUpgradeConfigs()
 		{
-			var enemyConfigs = _assets.LoadAssetsFromResources<PlayerUpgradeConfig>("Configs/PlayerUpgrade");
-			_playerUpgradesById = enemyConfigs.ToList().ToDictionary(x => x.PlayerUpgradeType, x => x);
+			var upgradeConfigs = _assets.LoadAssetsFromResources<PlayerUpgradeConfig>("Configs/PlayerUpgrade");
+			_playerUpgradesById = upgradeConfigs.ToList().ToDictionary(x => x.PlayerUpgradeType, x => x);
 		}
 
 		public EnemyConfig GetEnemyConfig(EnemyId id)

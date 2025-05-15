@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Code.Infrastructure.Config
 {
-    [CreateAssetMenu(fileName = "PlayerStatUpgradeConfig", menuName = Constants.GameName + "/Configs/PlayerUpgrade")]
+    [CreateAssetMenu(fileName = "PlayerStatUpgradeConfig", menuName = Constants.GameName + "/Configs/PlayerUpgrade/PlayerStatUpgradeConfig")]
     public class PlayerStatUpgradeConfig : PlayerUpgradeConfig
     {
         public StatType StatType;
