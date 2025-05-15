@@ -17,6 +17,6 @@ MonoBehaviour:
   MaxLevel: 1
   DescriptionFormat: +{0} orbitals
   OrbitalCount: 3
-  RotationSpeed: 10
+  RotationSpeed: 15
   OrbitRadius: 2
   RespawnInterval: 3

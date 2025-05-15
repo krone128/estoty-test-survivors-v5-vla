@@ -15,6 +15,6 @@ MonoBehaviour:
   Icon: {fileID: -1002307068, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
   PlayerUpgradeType: 6
   MaxLevel: 0
-  DescriptionFormat: '{0} +{1}'
+  DescriptionFormat: Damage +{0}
   StatType: 3
   UpgradeStep: 5

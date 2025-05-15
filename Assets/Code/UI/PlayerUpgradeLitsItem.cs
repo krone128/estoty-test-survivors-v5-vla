@@ -1,6 +1,4 @@
-using System;
 using Code.Infrastructure;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +6,7 @@ namespace Code.UI
 {
     public class PlayerUpgradeLitsItem : MonoBehaviour
     {
-        [SerializeField] private TMP_Text _descriptionText;
+        [SerializeField] private Text _descriptionText;
         [SerializeField] private Image _image;
         [SerializeField] private Button _button;
 

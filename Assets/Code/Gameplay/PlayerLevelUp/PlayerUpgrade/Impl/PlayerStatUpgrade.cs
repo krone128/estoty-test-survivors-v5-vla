@@ -13,7 +13,7 @@ namespace Code.Infrastructure
             : base(maxLevel, description, icon)
         {
             _statModifier = new StatModifier(statType, upgradeStep);
-            Description = string.Format(description, statType, upgradeStep);
+            Description = string.Format(description, upgradeStep);
             ViewModel.Description = Description;
         }
 

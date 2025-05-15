@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: PlayerUpgradeServiceConfig
   m_EditorClassIdentifier: 
   Upgrades:
-  - Enabled: 0
+  - Enabled: 1
     Upgrade: 1
-  - Enabled: 0
+  - Enabled: 1
     Upgrade: 2
-  - Enabled: 0
+  - Enabled: 1
     Upgrade: 3
-  - Enabled: 0
+  - Enabled: 1
     Upgrade: 4
   - Enabled: 1
     Upgrade: 5
-  - Enabled: 0
+  - Enabled: 1
     Upgrade: 6
-  - Enabled: 0
+  - Enabled: 1
     Upgrade: 7
   UpgradeSelectionRange: 3

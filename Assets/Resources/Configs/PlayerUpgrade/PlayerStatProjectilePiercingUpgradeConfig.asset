@@ -15,6 +15,6 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: e2f20be4a9f1c184485bcdc7bc65e23f, type: 3}
   PlayerUpgradeType: 2
   MaxLevel: 0
-  DescriptionFormat: '{0} +{1} hit'
+  DescriptionFormat: Piercing ammo +{0} hit
   StatType: 11
   UpgradeStep: 1

@@ -61,7 +61,7 @@ namespace Code.Infrastructure
         {
             var hashSet = new HashSet<IPlayerUpgrade>();
 
-            var selectionRange = Mathf.Min(_upgradeSelectionRange, _upgrades.Count(upgrade => upgrade.FullyUpgraded));
+            var selectionRange = Mathf.Min(_upgradeSelectionRange, _upgrades.Count(upgrade => !upgrade.FullyUpgraded));
             
             do
             {

@@ -2,11 +2,14 @@ using System.Collections.Generic;
 using System.Linq;
 using Code.Infrastructure;
 using Code.Infrastructure.UIManagement;
+using UnityEngine;
 
 namespace Code.UI
 {
     public class LevelUpWindow : WindowBase
     {
+        [SerializeField] private PlayerUpgradeLitsItem _cardPrefab;
+        
         public override bool IsUserCanClose { get; }
         public PlayerUpgradeLitsItem[] _selectionItems;
 
