@@ -7,7 +7,7 @@ namespace Code.Infrastructure
     public class DifficultyConfig : ScriptableObject
     {
         public float GameDifficultyUpdateInterval = 30;
-        public float EnemyDifficultyHealthStep = 5;
-        public float EnemyDifficultyDamageStep = 5;
+        public float EnemyHealthStep = 5;
+        public float EnemyDamageStep = 5;
     }
 }

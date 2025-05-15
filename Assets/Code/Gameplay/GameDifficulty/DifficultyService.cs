@@ -46,8 +46,8 @@ namespace Code.Infrastructure
         public void IncrementDifficulty()
         {
             Debug.Log("INCREMENT DIFFICULTY");
-            EnemyDamageIncrement += _config.EnemyDifficultyDamageStep;
-            EnemyHealthIncrement += _config.EnemyDifficultyHealthStep;
+            EnemyDamageIncrement += _config.EnemyDamageStep;
+            EnemyHealthIncrement += _config.EnemyHealthStep;
         }
     }
 }
