@@ -6,7 +6,5 @@ namespace Code.Infrastructure
     {
         public float EnemyHealthIncrement { get; }
         public float EnemyDamageIncrement { get; }
-
-        void ResetDifficulty();
     }
 }
