@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4655fd267249451382359373e204399a, type: 3}
   m_Name: SpawnerConfig
   m_EditorClassIdentifier: 
+  SpawnInterval: 2
+  SpawnDistanceGap: 0.5
   _spawnConfigs:
   - EnemyId: 2
-    SpawnChance: 0.5
+    SpawnChance: 1
   - EnemyId: 1
     SpawnChance: 0.4
   - EnemyId: 3
-    SpawnChance: 0.1
+    SpawnChance: 0.15

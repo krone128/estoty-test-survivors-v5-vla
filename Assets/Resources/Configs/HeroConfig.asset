@@ -17,10 +17,10 @@ MonoBehaviour:
   MovementSpeed: 5
   ProjectileSpeed: 10
   GunRotationSpeed: 10
-  Damage: 50
+  Damage: 10
   VisionRange: 10
   ShootCooldown: 1
-  LevelUpExperience: 1
+  LevelUpExperience: 10
   HealMultiplier: 1
   ProjectileBounce: 0
   ProjectilePiercing: 0
