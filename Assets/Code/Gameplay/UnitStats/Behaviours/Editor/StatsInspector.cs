@@ -46,6 +46,8 @@ namespace Code.Gameplay.UnitStats.Behaviours.Editor
 				if (_baseStats.TryGetValue(statType, out float currentValue))
 				{
 					float newValue = EditorGUILayout.FloatField(statType.ToString(), currentValue);
+					
+					EditorGUILayout.FloatField($"Mod {statType.ToString()}", _stats.GetStat(statType));
 
 					if (!Mathf.Approximately(newValue, currentValue))
 					{
