@@ -1,5 +1,6 @@
 using Code.Gameplay.Characters.Heroes.Services;
 using Code.Gameplay.Guns.Behaviours;
+using Code.Gameplay.PlayerLevelUp.PlayerUpgrade;
 using Code.Gameplay.UnitStats;
 using Code.Gameplay.UnitStats.Behaviours;
 using UnityEngine;

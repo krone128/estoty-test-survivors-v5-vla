@@ -3,10 +3,12 @@ using System.Linq;
 using Code.Gameplay.Characters.Enemies;
 using Code.Gameplay.Characters.Enemies.Configs;
 using Code.Gameplay.Characters.Heroes.Configs;
+using Code.Gameplay.GameDifficulty.Config;
 using Code.Gameplay.PickUps;
 using Code.Gameplay.PickUps.Configs;
+using Code.Gameplay.PlayerLevelUp.PlayerUpgrade;
+using Code.Gameplay.PlayerLevelUp.PlayerUpgrade.Config;
 using Code.Infrastructure.AssetManagement;
-using Code.Infrastructure.Config;
 
 namespace Code.Infrastructure.ConfigsManagement
 {

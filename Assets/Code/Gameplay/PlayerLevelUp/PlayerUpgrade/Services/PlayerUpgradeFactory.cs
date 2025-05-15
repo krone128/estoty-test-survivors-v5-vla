@@ -1,8 +1,8 @@
-using Code.Infrastructure.Config;
-using Code.Infrastructure.PlayerLevelUp.PlayerUpgrade;
+using Code.Gameplay.PlayerLevelUp.PlayerUpgrade.Config;
+using Code.Infrastructure;
 using JetBrains.Annotations;
 
-namespace Code.Infrastructure
+namespace Code.Gameplay.PlayerLevelUp.PlayerUpgrade.Services
 {
     [UsedImplicitly]
     public class PlayerUpgradeFactory : IPlayerUpgradeFactory

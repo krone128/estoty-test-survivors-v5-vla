@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace Code.Infrastructure
+namespace Code.Gameplay.GameDifficulty.Config
 {
     [CreateAssetMenu(fileName = "DifficultyConfig", menuName = Constants.GameName + "/Configs/Difficulty")]
     public class DifficultyConfig : ScriptableObject

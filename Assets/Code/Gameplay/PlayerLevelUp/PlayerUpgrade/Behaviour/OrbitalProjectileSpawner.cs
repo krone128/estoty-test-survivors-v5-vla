@@ -6,7 +6,7 @@ using Code.Gameplay.UnitStats.Behaviours;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Infrastructure.Behaviour
+namespace Code.Gameplay.PlayerLevelUp.PlayerUpgrade.Behaviour
 {
     public class OrbitalProjectileSpawner : MonoBehaviour
     {

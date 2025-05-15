@@ -2,6 +2,7 @@ using Code.Gameplay.Characters.Heroes.Configs;
 using Code.Gameplay.Guns.Behaviours;
 using Code.Gameplay.Identification.Behaviours;
 using Code.Gameplay.Lifetime.Behaviours;
+using Code.Gameplay.PlayerLevelUp.PlayerUpgrade.Behaviour;
 using Code.Gameplay.UnitStats;
 using Code.Gameplay.UnitStats.Behaviours;
 using Code.Infrastructure;

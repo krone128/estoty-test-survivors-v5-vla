@@ -1,10 +1,10 @@
 using Code.Gameplay.Characters.Heroes.Services;
-using Code.Infrastructure.Behaviour;
+using Code.Gameplay.PlayerLevelUp.PlayerUpgrade.Behaviour;
 using UnityEngine;
 
-namespace Code.Infrastructure.PlayerLevelUp.PlayerUpgrade
+namespace Code.Gameplay.PlayerLevelUp.PlayerUpgrade
 {
-    public class OrbitalPlayerUpgrade : Infrastructure.PlayerUpgrade
+    public class OrbitalPlayerUpgrade : PlayerUpgrade
     {
         private int OrbitalMaxCount;
         private float OrbitalSpeed;

@@ -1,7 +1,8 @@
 using System;
+using Code.Infrastructure;
 using UnityEngine;
 
-namespace Code.Infrastructure.Config
+namespace Code.Gameplay.PlayerLevelUp.PlayerUpgrade.Config
 {
     [CreateAssetMenu(fileName = "PlayerUpgradeServiceConfig", menuName = Constants.GameName + "/Configs/PlayerUpgradeService/PlayerUpgradeServiceConfig")]
     public class PlayerUpgradeServiceConfig : ScriptableObject

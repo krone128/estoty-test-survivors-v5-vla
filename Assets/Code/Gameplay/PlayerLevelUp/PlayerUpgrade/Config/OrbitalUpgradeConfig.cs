@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Code.Infrastructure.Config
+namespace Code.Gameplay.PlayerLevelUp.PlayerUpgrade.Config
 {
     [CreateAssetMenu(fileName = "PlayerOrbitalUpgradeConfig", menuName = Constants.GameName + "/Configs/PlayerUpgrade/PlayerOrbitalUpgradeConfig")]
     public class OrbitalUpgradeConfig : PlayerUpgradeConfig

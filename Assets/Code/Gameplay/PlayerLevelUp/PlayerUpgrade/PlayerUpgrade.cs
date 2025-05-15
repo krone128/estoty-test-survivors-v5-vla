@@ -1,7 +1,8 @@
 using Code.Gameplay.Characters.Heroes.Services;
+using Code.Infrastructure;
 using UnityEngine;
 
-namespace Code.Infrastructure
+namespace Code.Gameplay.PlayerLevelUp.PlayerUpgrade
 {
     public abstract class PlayerUpgrade : IPlayerUpgrade
     {

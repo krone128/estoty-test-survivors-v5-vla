@@ -1,9 +1,9 @@
 using System;
 using System.Linq;
-using Code.Gameplay.Combat.Dispatchers;
+using Code.Gameplay.Lifetime.Behaviours;
 using UnityEngine;
 
-namespace Code.Gameplay.Lifetime.Behaviours
+namespace Code.Gameplay.Projectiles.Behaviours
 {
 	[RequireComponent(typeof(IDamageApplier))]
 	public class ProjectileHitHandler : MonoBehaviour, IDestroyNotify

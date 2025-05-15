@@ -1,7 +1,7 @@
 using Code.Gameplay.Movement.Behaviours;
 using Code.Gameplay.Vision.Behaviours;
 
-namespace Code.Gameplay.Combat.Dispatchers
+namespace Code.Gameplay.Projectiles.Behaviours
 {
     public class ProjectileHitBounceDispatcher : ProjectileHitDispatcherBase
     {

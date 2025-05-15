@@ -1,4 +1,4 @@
-namespace Code.Infrastructure
+namespace Code.Gameplay.GameDifficulty
 {
     public interface IDifficultyService
     {

@@ -2,7 +2,7 @@ using Code.Gameplay.UnitStats;
 using Code.Gameplay.UnitStats.Behaviours;
 using UnityEngine;
 
-namespace Code.Gameplay.Combat.Dispatchers
+namespace Code.Gameplay.Projectiles.Behaviours
 {
     public abstract class ProjectileHitDispatcherBase : MonoBehaviour
     {

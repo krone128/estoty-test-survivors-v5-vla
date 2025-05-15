@@ -1,13 +1,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using Code.Gameplay.Characters.Heroes.Services;
+using Code.Gameplay.PlayerLevelUp.PlayerUpgrade.Services;
+using Code.Infrastructure;
 using Code.Infrastructure.ConfigsManagement;
 using Code.Infrastructure.UIManagement;
 using Code.UI;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Infrastructure
+namespace Code.Gameplay.PlayerLevelUp.PlayerUpgrade.Behaviour
 {
     public class PlayerUpgradeManager : MonoBehaviour
     {

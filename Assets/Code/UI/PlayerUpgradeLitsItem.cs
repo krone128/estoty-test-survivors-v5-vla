@@ -1,3 +1,5 @@
+using Code.Gameplay.PlayerLevelUp.PlayerUpgrade;
+using Code.Gameplay.PlayerLevelUp.PlayerUpgrade.Services;
 using Code.Infrastructure;
 using UnityEngine;
 using UnityEngine.UI;

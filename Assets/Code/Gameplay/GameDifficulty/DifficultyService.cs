@@ -1,9 +1,11 @@
+using Code.Gameplay.GameDifficulty.Config;
+using Code.Infrastructure;
 using Code.Infrastructure.ConfigsManagement;
 using JetBrains.Annotations;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Infrastructure
+namespace Code.Gameplay.GameDifficulty
 {
     [UsedImplicitly]
     public class DifficultyService : IDifficultyService, ITickable

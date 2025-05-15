@@ -1,5 +1,6 @@
 using Code.Gameplay.Characters.Enemies.Behaviours;
 using Code.Gameplay.Characters.Enemies.Configs;
+using Code.Gameplay.GameDifficulty;
 using Code.Gameplay.Identification.Behaviours;
 using Code.Gameplay.Lifetime.Behaviours;
 using Code.Gameplay.UnitStats;

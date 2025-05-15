@@ -1,9 +1,8 @@
-using System.Collections.Generic;
 using Code.Gameplay.Characters.Heroes.Services;
 using Code.Gameplay.UnitStats;
 using UnityEngine;
 
-namespace Code.Infrastructure
+namespace Code.Gameplay.PlayerLevelUp.PlayerUpgrade
 {
     public class PlayerStatUpgrade : PlayerUpgrade
     {

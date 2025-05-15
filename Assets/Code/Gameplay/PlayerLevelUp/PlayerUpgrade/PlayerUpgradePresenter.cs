@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Code.Infrastructure
+namespace Code.Gameplay.PlayerLevelUp.PlayerUpgrade
 {
     public class PlayerUpgradePresenter : IPlayerUpgradePresenter
     {

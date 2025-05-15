@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Code.Infrastructure.Config
+namespace Code.Gameplay.PlayerLevelUp.PlayerUpgrade.Config
 {
     [CreateAssetMenu(fileName = "GunStatUpgradeConfig", menuName = Constants.GameName + "/Configs/PlayerUpgrade/GunStatUpgradeConfig")]
 

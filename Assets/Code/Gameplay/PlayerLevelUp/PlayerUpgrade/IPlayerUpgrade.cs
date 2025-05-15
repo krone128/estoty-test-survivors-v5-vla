@@ -1,6 +1,7 @@
 using Code.Gameplay.Characters.Heroes.Services;
+using Code.Gameplay.PlayerLevelUp.PlayerUpgrade.Services;
 
-namespace Code.Infrastructure
+namespace Code.Gameplay.PlayerLevelUp.PlayerUpgrade
 {
     public interface IPlayerUpgrade
     {

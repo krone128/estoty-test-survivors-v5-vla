@@ -1,4 +1,4 @@
-namespace Code.Gameplay.Combat.Dispatchers
+namespace Code.Gameplay.Projectiles.Behaviours
 {
     public class ProjectileHitPiercingDispatcher : ProjectileHitDispatcherBase
     {
