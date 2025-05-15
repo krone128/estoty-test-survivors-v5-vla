@@ -6,7 +6,7 @@ using Zenject;
 namespace Code.Infrastructure
 {
     [UsedImplicitly]
-    public class DifficultyService : IDifficultyService
+    public class DifficultyService : IDifficultyService, ITickable
     {
         private float _lastDifficultyUpdate;
         private float _elapsedTime;
@@ -43,9 +43,9 @@ namespace Code.Infrastructure
             IncrementDifficulty();
         }
 
-        public void IncrementDifficulty()
+        private void IncrementDifficulty()
         {
-            Debug.Log("INCREMENT DIFFICULTY");
+            Debug.Log("Increment Difficulty");
             EnemyDamageIncrement += _config.EnemyDamageStep;
             EnemyHealthIncrement += _config.EnemyHealthStep;
         }

@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Code.Gameplay.Combat.Dispatchers;
 using UnityEngine;
 
@@ -7,10 +8,10 @@ namespace Code.Gameplay.Lifetime.Behaviours
 	[RequireComponent(typeof(IDamageApplier))]
 	public class ProjectileHitHandler : MonoBehaviour, IDestroyNotify
 	{
-		public event Action OnDestroy;
-		
 		[SerializeField] private float _delay;
 		[SerializeField] private ProjectileHitDispatcherBase[] _projectileDispatchers;
+		
+		public event Action OnDestroy;
 		
 		private IDamageApplier _damageApplier;
 
@@ -31,16 +32,10 @@ namespace Code.Gameplay.Lifetime.Behaviours
 
 		private void HandleDamageApplied(Health damage, int targetId)
 		{
-			foreach (var projectileDispatcher in _projectileDispatchers)
-			{
-				if (projectileDispatcher.Dispatch(targetId))
-				{
-					return;
-				}
-			}
+			if (_projectileDispatchers.Any(projectileDispatcher => projectileDispatcher.Dispatch(targetId)))
+				return;
 			
 			OnDestroy?.Invoke();
-			
 			Destroy(gameObject, _delay);
 		}
 	}

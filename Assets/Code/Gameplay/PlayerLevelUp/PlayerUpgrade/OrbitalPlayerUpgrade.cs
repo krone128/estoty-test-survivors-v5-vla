@@ -19,7 +19,7 @@ namespace Code.Infrastructure.PlayerLevelUp.PlayerUpgrade
             OrbitalRadius = orbitRadius;
             OrbitalMaxCount = orbitalMaxCount;
             OrbitalRespawnInterval = respawnInterval;
-            ViewModel.Description = string.Format(description, orbitalMaxCount);
+            Presenter.Description = string.Format(description, orbitalMaxCount);
         }
 
         public override void Remove(IHeroProvider heroProvider)

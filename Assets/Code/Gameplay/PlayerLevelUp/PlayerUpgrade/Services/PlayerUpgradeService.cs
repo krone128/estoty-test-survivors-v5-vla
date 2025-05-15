@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Code.Gameplay.Characters.Heroes.Services;
 using Code.Infrastructure.ConfigsManagement;
 using Code.Infrastructure.UIManagement;
 using Code.UI;
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEngine;
 using Zenject;
 
@@ -35,18 +37,21 @@ namespace Code.Infrastructure
                 
                 var upgradeConfig = _configsService.GetPlayerUpgradeConfig(upgradeType.Upgrade);
                 var upgrade = _playerUpgradeFactory.CreateUpgrade(upgradeConfig);
-                upgrade.ViewModel.OnSelected += Apply;
+                upgrade.Presenter.OnSelected += Apply;
                 _upgrades.Add(upgrade);
                 
                 continue;
 
-                void Apply() => ApplyPlayerUpgrade(upgrade);
+                void Apply()
+                {
+                    ApplyPlayerUpgrade(upgrade);
+                }
             }
 
-            _heroProvider.OnLevelUp += StartLevelUp;
+            _heroProvider.Experience.OnLevelUp += StartLevelUp;
         }
 
-        private void StartLevelUp()
+        private void StartLevelUp(int playerLevel)
         {
             if(_upgrades.All(item => item.FullyUpgraded)) return;
             
@@ -57,7 +62,7 @@ namespace Code.Infrastructure
             _uiService.OpenWindow<LevelUpWindow>();
         }
 
-        public IEnumerable<IPlayerUpgradeViewModel> GetPlayerUpgradeSelection()
+        private IEnumerable<IPlayerUpgradePresenter> GetPlayerUpgradeSelection()
         {
             var hashSet = new HashSet<IPlayerUpgrade>();
 
@@ -75,10 +80,10 @@ namespace Code.Infrastructure
             } 
             while (hashSet.Count < selectionRange);
             
-            return hashSet.Select(item => item.ViewModel);
+            return hashSet.Select(item => item.Presenter);
         }
 
-        public void ApplyPlayerUpgrade(IPlayerUpgrade playerUpgrade)
+        private void ApplyPlayerUpgrade(IPlayerUpgrade playerUpgrade)
         {
             _uiService.CloseWindow<LevelUpWindow>();
             playerUpgrade.Apply(_heroProvider);

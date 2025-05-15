@@ -10,13 +10,13 @@ namespace Code.Infrastructure
         public string Description { get; protected set; }
         public bool FullyUpgraded => MaxLevel > 0 && Level >= MaxLevel;
 
-        public IPlayerUpgradeViewModel ViewModel { get; private set; } = new PlayerUpgradeViewModel();
+        public IPlayerUpgradePresenter Presenter { get; } = new PlayerUpgradePresenter();
 
         protected PlayerUpgrade(int maxLevel, string description, Sprite icon)
         {
             MaxLevel = maxLevel;
-            ViewModel.Icon = icon;
-            ViewModel.Description = description;
+            Presenter.Icon = icon;
+            Presenter.Description = description;
         }
 
         public void Apply(IHeroProvider heroProvider)

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Code.Infrastructure
 {
-    public interface IPlayerUpgradeViewModel
+    public interface IPlayerUpgradePresenter
     {
         public event Action OnSelected;
         

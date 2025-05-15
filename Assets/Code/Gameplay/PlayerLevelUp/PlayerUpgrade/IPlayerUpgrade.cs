@@ -10,7 +10,7 @@ namespace Code.Infrastructure
         public string Description { get; }
         public bool FullyUpgraded { get; }
 
-        public IPlayerUpgradeViewModel ViewModel { get; }
+        public IPlayerUpgradePresenter Presenter { get; }
 
         public void Apply(IHeroProvider heroProvider);
         public void Remove(IHeroProvider heroProvider);

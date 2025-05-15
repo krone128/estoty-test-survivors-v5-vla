@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Code.Gameplay.UnitStats;
 using Code.Gameplay.UnitStats.Behaviours;
 using Code.Infrastructure;
@@ -14,8 +15,7 @@ namespace Code.Gameplay.Lifetime.Behaviours
 		[field: SerializeField] public float LevelUpExperience { get; private set; }
 
 		private Stats _stats;
-		
-		public event Action<float> OnExperienceChanged;
+
 		public event Action<int> OnLevelUp;
 
 		private void Awake()
@@ -33,7 +33,6 @@ namespace Code.Gameplay.Lifetime.Behaviours
 		public void AddExperience(float amount)
 		{
 			CurrentExperience += amount;
-			OnExperienceChanged?.Invoke(amount);
 			while (CurrentExperience >= LevelUpExperience) LevelUpPlayer();
 		}
 		

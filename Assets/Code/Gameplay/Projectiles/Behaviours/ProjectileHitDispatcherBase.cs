@@ -8,10 +8,9 @@ namespace Code.Gameplay.Combat.Dispatchers
     {
         [SerializeField] private StatType _maxHitsStat;
         [SerializeField] private Stats _stats;
-        
-        public int MaxHits => Mathf.RoundToInt(_stats.GetStat(_maxHitsStat));
-        public int CurrentHit { get; set; }
 
+        private int MaxHits => Mathf.RoundToInt(_stats.GetStat(_maxHitsStat));
+        private int CurrentHit { get; set; }
 
         public bool Dispatch(int hitId)
         {
@@ -20,15 +19,16 @@ namespace Code.Gameplay.Combat.Dispatchers
             DispatchEffect(hitId);
             return true;
         }
+        
+        
+        public void ResetCounter()
+        {
+            CurrentHit = 0;
+        }
 
         protected void Complete()
         {
             CurrentHit = MaxHits;
-        }
-
-        public void ResetCounter()
-        {
-            CurrentHit = 0;
         }
         
         protected abstract void DispatchEffect(int targetId);

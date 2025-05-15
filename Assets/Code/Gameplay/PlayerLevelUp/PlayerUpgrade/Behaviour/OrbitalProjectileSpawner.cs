@@ -30,6 +30,20 @@ namespace Code.Infrastructure.Behaviour
         private Transform[] _sockets;
         private Transform _socketRoot;
         
+        public void Initialize(int projectileMaxCount, float speed, float orbitRadius, float projectileUpdateInterval)
+        {
+            _maxProjectileCount = projectileMaxCount;
+            _projectileUpdateInterval = projectileUpdateInterval;
+            _orbitRadius = orbitRadius;
+            _projectileSpeed = speed;
+            _projectileCount = 0;
+            
+            _activeProjectiles = new IDestroyNotify[projectileMaxCount];
+            _sockets = new Transform[projectileMaxCount];
+            
+            SpawnSockets();
+            SpawnInitialProjectiles();
+        }
 
         private void Update()
         {
@@ -78,21 +92,6 @@ namespace Code.Infrastructure.Behaviour
                 _activeProjectiles[orbitalIndex] = null;
                 _projectileCount--;
             }
-        }
-
-        public void Initialize(int projectileMaxCount, float speed, float orbitRadius, float projectileUpdateInterval)
-        {
-            _maxProjectileCount = projectileMaxCount;
-            _projectileUpdateInterval = projectileUpdateInterval;
-            _orbitRadius = orbitRadius;
-            _projectileSpeed = speed;
-            _projectileCount = 0;
-            
-            _activeProjectiles = new IDestroyNotify[projectileMaxCount];
-            _sockets = new Transform[projectileMaxCount];
-            
-            SpawnSockets();
-            SpawnInitialProjectiles();
         }
 
         private void SpawnInitialProjectiles()

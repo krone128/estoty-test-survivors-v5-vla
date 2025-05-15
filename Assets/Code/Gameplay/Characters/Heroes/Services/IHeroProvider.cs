@@ -12,7 +12,6 @@ namespace Code.Gameplay.Characters.Heroes.Services
 		Health Health { get; }
 		Stats Stats { get; }
 		PlayerExperience Experience { get; }
-		PlayerAbilities Abilities { get; }
 		void SetHero(Behaviours.Hero hero);
 	}
 }

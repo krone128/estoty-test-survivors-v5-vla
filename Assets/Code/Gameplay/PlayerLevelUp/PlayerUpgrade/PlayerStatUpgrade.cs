@@ -14,7 +14,7 @@ namespace Code.Infrastructure
         {
             _statModifier = new StatModifier(statType, upgradeStep);
             Description = string.Format(description, upgradeStep);
-            ViewModel.Description = Description;
+            Presenter.Description = Description;
         }
 
         public override void Remove(IHeroProvider heroProvider)
