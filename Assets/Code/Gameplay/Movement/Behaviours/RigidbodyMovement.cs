@@ -25,7 +25,7 @@ namespace Code.Gameplay.Movement.Behaviours
 		private void FixedUpdate()
 		{
 			CalculateVelocity();
-			_rigidbody.velocity = Velocity;
+			_rigidbody.linearVelocity = Velocity;
 		}
 
 		private void CalculateVelocity()
